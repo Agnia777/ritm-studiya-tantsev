@@ -123,6 +123,7 @@ h2, .hero-lead, .sign, .free .big, .signup .tel, .addr { transform: skewX(-8deg)
 .hero-lead { font: 900 clamp(1.3rem, 3.6vw, 2.3rem)/1.2 var(--head); margin: 0 0 14px; }
 .hero-lead span { display: block; }
 .hero-lead b { color: var(--pink); text-shadow: 0 0 .6em rgba(255,79,160,.6); font-weight: inherit; }
+.hero-sub span { display: block; }
 .hero-sub { max-width: 52ch; color: #d6d9e1; margin-bottom: 26px; }
 .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-addr { margin: 20px 0 0; color: var(--muted); font-size: 16px; }
@@ -247,7 +248,7 @@ html:not(.js) .dir p { max-height: none; opacity: 1; }
 .av:focus-visible .av-img { outline: 3px solid var(--cyan); outline-offset: 3px; }
 .av:hover, .av:focus-visible, .av.show { z-index: 30; }
 .av-img { position: relative; display: grid; place-items: center; overflow: hidden; opacity: 1; width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--c); background: var(--panel); box-shadow: 0 0 18px -2px var(--c); transition: transform .5s ease, box-shadow .3s; font: 900 1.8rem/1 var(--head); color: var(--c); }
-.av:nth-child(1) { --c: var(--violet); } .av:nth-child(2) { --c: var(--pink); } .av:nth-child(3) { --c: var(--cyan); } .av:nth-child(4) { --c: var(--violet); } .av:nth-child(5) { --c: var(--pink); }
+.av:nth-child(1) { --c: var(--violet); } .av:nth-child(2) { --c: var(--pink); } .av:nth-child(3) { --c: var(--cyan); } .av:nth-child(4) { --c: var(--violet); } .av:nth-child(5) { --c: var(--pink); } .av:nth-child(6) { --c: var(--cyan); }
 .av-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .av:hover .av-img, .av.show .av-img { transform: scale(1.07); box-shadow: 0 0 28px 2px var(--c); }
 .av-tip { position: absolute; left: 50%; bottom: calc(100% + 10px); display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 16px; border-radius: 8px; background: var(--ink); color: var(--bg); white-space: nowrap; pointer-events: none; z-index: 50; box-shadow: 0 12px 28px rgba(0,0,0,.5); opacity: 0; transform: translate(-50%, 20px) scale(.6); transition: opacity .2s ease, transform .5s cubic-bezier(.3, 1.6, .5, 1); }
@@ -356,7 +357,7 @@ footer b { color: var(--ink); }
   <div class="wrap">
     <h1 class="sign" aria-label="Ритм - детская студия танцев в Санкт-Петербурге"><span aria-hidden="true" class="l">Р</span><span aria-hidden="true" class="l">И</span><span aria-hidden="true" class="l">Т</span><span aria-hidden="true" class="l">М</span></h1>
     <p class="hero-lead"><span>Первое занятие <b>бесплатное.</b></span> <span>Приходите попробовать</span></p>
-    <p class="hero-sub">Детская студия танцев «Ритм» в Санкт-Петербурге. Хип-хоп, современный танец и хореография для малышей. Дети от 4 до 14 лет, в группе не больше 10 человек.</p>
+    <p class="hero-sub"><span>Детская студия танцев «Ритм» в Санкт-Петербурге.</span> <span>Хип-хоп, современный танец и хореография для малышей.</span> <span>Дети от 4 до 14 лет.</span> <span>В группе не больше 10 человек.</span></p>
     <div class="hero-btns">
       <a class="btn btn-main" href="#zapis">Записаться на пробное занятие</a>
       <a class="btn btn-ghost" href="tel:+70000000000">Позвонить +7 000 000-00-00</a>
@@ -538,6 +539,7 @@ footer b { color: var(--ink); }
       <button type="button" class="av" aria-label="Отзыв: Наталья, мама Миши"><span class="av-img"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" focusable="false"><circle cx="32" cy="24" r="11" fill="currentColor"/><path d="M9 60c2-15 12-21 23-21s21 6 23 21z" fill="currentColor"/></svg></span><span class="av-tip" aria-hidden="true"><span class="av-name">Наталья</span><span class="av-role">мама Миши, 5 лет</span><span class="av-text">Занятия короткие и с играми, для малыша в самый раз. Усталым домой не приходит.</span></span></button>
       <button type="button" class="av" aria-label="Отзыв: Светлана, мама Дарьи"><span class="av-img"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" focusable="false"><circle cx="32" cy="24" r="11" fill="currentColor"/><path d="M9 60c2-15 12-21 23-21s21 6 23 21z" fill="currentColor"/></svg></span><span class="av-tip" aria-hidden="true"><span class="av-name">Светлана</span><span class="av-role">мама Дарьи, 10 лет</span><span class="av-text">Нравится, что группы небольшие и педагог всех видит. После концерта дочка ещё неделю говорила о сцене.</span></span></button>
       <button type="button" class="av" aria-label="Отзыв: Андрей, папа Лизы"><span class="av-img"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" focusable="false"><circle cx="32" cy="24" r="11" fill="currentColor"/><path d="M9 60c2-15 12-21 23-21s21 6 23 21z" fill="currentColor"/></svg></span><span class="av-tip" aria-hidden="true"><span class="av-name">Андрей</span><span class="av-role">папа Лизы, 9 лет</span><span class="av-text">Понравилось, что можно прийти на первое занятие бесплатно и без обязательств.</span></span></button>
+      <button type="button" class="av" aria-label="Отзыв: Виктор, дедушка Тимура"><span class="av-img"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" focusable="false"><circle cx="32" cy="24" r="11" fill="currentColor"/><path d="M9 60c2-15 12-21 23-21s21 6 23 21z" fill="currentColor"/></svg></span><span class="av-tip" aria-hidden="true"><span class="av-name">Виктор</span><span class="av-role">дедушка Тимура, 8 лет</span><span class="av-text">Вожу внука два раза в неделю. Пока он занимается, жду в холле. На концерте сидел в зале и хлопал громче всех.</span></span></button>
     </div>
     <p class="rev-hint">Наведите курсор или нажмите на круг.</p>
     <figure class="rev-card rv" id="rev-card" aria-live="polite">
